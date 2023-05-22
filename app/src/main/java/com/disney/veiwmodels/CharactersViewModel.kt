@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.disney.character.viewstate.CharactersViewState
 import com.disney.character.viewstate.CharactersViewState.Loading
+import com.disney.uimodels.Character
 import com.disney.uimodels.CharactersMapper
 import com.disney.usecase.GetCharacters
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -28,7 +29,8 @@ class CharactersViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 getCharacters().let { characters ->
-                    charactersState.value = CharactersViewState.Success(mapper.transform(characters))
+                    val mappedItems:List<Character> = mapper.transform(characters).sortedByDescending { it.popularity }
+                    charactersState.value = CharactersViewState.Success(mappedItems)
                 }
             } catch (e: Error) {
                 charactersState.value = CharactersViewState.Error

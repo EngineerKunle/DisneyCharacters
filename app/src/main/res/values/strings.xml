@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">DisneyCharacter</string>
+    <string name="disney_image">Disney Image</string>
+
+    <string name="title_films">Films</string>
+    <string name="title_no_films">This character does not appear in any movies.</string>
+
+    <string name="title_short_films">Short Films</string>
+    <string name="title_no_short_films">This character does not appear in any short films.</string>
+
+    <string name="title_park_attractions">Park Attractions</string>
+    <string name="title_no_park_attractions">This character does not appear in any Park Attractions.</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.disney.character
+package com.disney.character.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
