@@ -10,6 +10,8 @@ data class CharactersDto(
 data class CharacterDto(
     val id: Int,
     val name: String,
+    val imageUrl: String,
+    val films: List<String>,
     val shortFilms: List<String>,
     val parkAttractions: List<String>,
 )

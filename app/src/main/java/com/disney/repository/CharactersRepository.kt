@@ -12,7 +12,7 @@ class CharactersRepository @Inject constructor(
 
     override suspend fun getCharacters(): CharactersDto {
         return withContext(Dispatchers.IO) {
-            disneyService.getCharacters(pageSize = 20)
+            disneyService.getCharacters(pageSize = 100)
         }
     }
 }

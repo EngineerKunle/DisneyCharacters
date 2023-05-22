@@ -10,6 +10,8 @@ class CharactersMapper @Inject constructor() {
         Character(
             it.id,
             it.name,
+            it.imageUrl,
+            it.films,
             it.shortFilms,
             it.parkAttractions,
             calculatePopularity(it)
